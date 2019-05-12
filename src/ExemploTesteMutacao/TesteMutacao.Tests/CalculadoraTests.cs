@@ -43,8 +43,7 @@ namespace TesteMutacao.Tests
             var result = this.calculadora.Dividir(100, 4);
             Assert.AreEqual(25, result);
         }
-
-
+        
         [TestMethod]
         public void Dividir_Sucesso()
         {
