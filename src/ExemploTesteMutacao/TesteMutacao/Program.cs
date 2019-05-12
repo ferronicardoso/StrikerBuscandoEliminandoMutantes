@@ -21,6 +21,12 @@ namespace TesteMutacao
 
                 if (fileInfo.Exists)
                 {
+                    var directoryFile = Path.GetDirectoryName(assemblyPath);
+                    var oldFileName = Path.GetFileNameWithoutExtension(assemblyPath);
+                    var extensionFile = Path.GetExtension(assemblyPath);
+                    var newAssemblyPath = Path.Combine(directoryFile, string.Format("{0}{1}{2}", oldFileName, ".old", extensionFile));
+                    File.Copy(assemblyPath, newAssemblyPath, true);
+
                     using (var assemblyDefinition = AssemblyDefinition.ReadAssembly(assemblyPath, new ReaderParameters { ReadingMode = ReadingMode.Immediate, ReadWrite = true, InMemory = true }))
                     {
                         var moduleDefinition = assemblyDefinition.MainModule;
