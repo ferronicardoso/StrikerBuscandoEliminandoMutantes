@@ -43,7 +43,7 @@ namespace TesteMutacao.Tests
             var result = this.calculadora.Dividir(100, 4);
             Assert.AreEqual(25, result);
         }
-        
+
         [TestMethod]
         public void Dividir_Sucesso()
         {
@@ -55,6 +55,25 @@ namespace TesteMutacao.Tests
             catch
             {
                 Assert.IsTrue(true);
+            }
+        }
+
+        [TestMethod, ExpectedException(typeof(DivideByZeroException))]
+        public void Dividir_Exception()
+        {
+            this.calculadora.Dividir(1, 0);
+        }
+
+        [TestMethod]
+        public void Dividir_Por_Zero()
+        {
+            try
+            {
+                this.calculadora.Dividir(1, 0);
+            }
+            catch(Exception ex)
+            {
+                Assert.IsTrue(ex.Message.Contains("dividir por zero"));
             }
         }
     }

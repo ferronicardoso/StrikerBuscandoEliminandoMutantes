@@ -22,7 +22,7 @@ Write-Host "Compilando aplicação..." -ForegroundColor Green
 
 Write-Host "----------------------------------------------------------------------------"
 Write-Host "Executando testes unitários..." -ForegroundColor Green
-dotnet vstest TesteMutacao.Tests\bin\Debug\TesteMutacao.Tests.dll
+dotnet vstest --Blame TesteMutacao.Tests\bin\Debug\TesteMutacao.Tests.dll
 
 Write-Host "(Pressione qualquer tecla para continuar)" -ForegroundColor Yellow
 $x = $host.ui.RawUI.ReadKey("NoEcho,IncludeKeyDown")

@@ -20,6 +20,7 @@ namespace TesteMutacao.Exemplo
 
         public decimal Dividir(decimal a, decimal b)
         {
+            if (b == decimal.Zero) throw new DivideByZeroException("Não é possível dividir por zero‬");
             return a / b;
         }
 

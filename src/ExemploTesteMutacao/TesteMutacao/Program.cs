@@ -81,6 +81,12 @@ namespace TesteMutacao
                                 case "op_Division":
                                     newOperationName = "op_Multiply";
                                     break;
+                                case "op_Equality":
+                                    newOperationName = "op_Inequality";
+                                    break;
+                                case "op_Inequality":
+                                    newOperationName = "op_Equality";
+                                    break;
                             }
 
                             var methodInfo = typeof(decimal).GetMethod(newOperationName, new Type[] { typeof(decimal), typeof(decimal) });
