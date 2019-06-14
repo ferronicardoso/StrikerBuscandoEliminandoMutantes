@@ -19,6 +19,7 @@ namespace Tests
         [TestCase(12)]
         [TestCase(18)]
         [TestCase(21)]
+        [Category("NUnit")]
         public void Validar_Fizz(int value)
         {
             var result = this.fizzBuzz.Validate(value);
@@ -30,6 +31,7 @@ namespace Tests
         [TestCase(20)]
         [TestCase(25)]
         [TestCase(35)]
+        [Category("NUnit")]
         public void Validar_Buzz(int value)
         {
             var result = this.fizzBuzz.Validate(value);
@@ -40,6 +42,7 @@ namespace Tests
         [TestCase(30)]
         [TestCase(45)]
         [TestCase(60)]
+        [Category("NUnit")]
         public void Validar_FizzBuzz(int value)
         {
             var result = this.fizzBuzz.Validate(value);
@@ -51,6 +54,7 @@ namespace Tests
         [TestCase(4)]
         [TestCase(7)]
         [TestCase(8)]
+        [Category("NUnit")]
         public void Validar_Numero(int value)
         {
             var result = this.fizzBuzz.Validate(value);

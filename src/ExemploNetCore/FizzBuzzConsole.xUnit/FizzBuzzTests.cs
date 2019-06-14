@@ -20,6 +20,7 @@ namespace FizzBuzzConsole.xUnit
         [InlineData(12)]
         [InlineData(18)]
         [InlineData(21)]
+        [Trait("xUnit", "")]
         public void Validar_Fizz(int value)
         {
             var result = this.fizzBuzz.Validate(value);
@@ -32,6 +33,7 @@ namespace FizzBuzzConsole.xUnit
         [InlineData(20)]
         [InlineData(25)]
         [InlineData(35)]
+        [Trait("xUnit", "")]
         public void Validar_Buzz(int value)
         {
             var result = this.fizzBuzz.Validate(value);
@@ -43,6 +45,7 @@ namespace FizzBuzzConsole.xUnit
         [InlineData(30)]
         [InlineData(45)]
         [InlineData(60)]
+        [Trait("xUnit", "")]
         public void Validar_FizzBuzz(int value)
         {
             var result = this.fizzBuzz.Validate(value);
@@ -55,6 +58,7 @@ namespace FizzBuzzConsole.xUnit
         [InlineData(4)]
         [InlineData(7)]
         [InlineData(8)]
+        [Trait("xUnit", "")]
         public void Validar_Numero(int value)
         {
             var result = this.fizzBuzz.Validate(value);

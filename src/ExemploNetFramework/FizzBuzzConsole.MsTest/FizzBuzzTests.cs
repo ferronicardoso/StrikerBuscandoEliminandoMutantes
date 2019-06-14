@@ -39,24 +39,28 @@ namespace FizzBuzzConsole.MsTest
             Assert.AreEqual(value.ToString(), result);
         }
 
+        [TestCategory("MSTest")]
         [TestMethod]
         public void Validar_Fizz()
         {
             Validar_Fizz(3);
         }
 
+        [TestCategory("MSTest")]
         [TestMethod]
         public void Validar_Buzz()
         {
             Validar_Buzz(5);
         }
 
+        [TestCategory("MSTest")]
         [TestMethod]
         public void Validar_FizzBuzz()
         {
             Validar_FizzBuzz(15);
         }
 
+        [TestCategory("MSTest")]
         [TestMethod]
         public void Validar_Numero()
         {

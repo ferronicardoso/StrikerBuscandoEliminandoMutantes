@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FizzBuzzConsole.Utils;
+using System;
 
 namespace FizzBuzzConsole.App
 {
@@ -6,7 +7,14 @@ namespace FizzBuzzConsole.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var fizzBuzz = new FizzBuzz();
+            for (int i = 0; i < 100; i++)
+            {
+                var result = fizzBuzz.Validate(i);
+                Console.WriteLine("{0} --> {1}", i, result);
+            }
+            Console.WriteLine("Pressione qualquer tecla para continuar...");
+            Console.ReadKey();
         }
     }
 }
